@@ -18,7 +18,6 @@ describe("Colors", () => {
 describe("Text Styles", () => {
     it("should generate code snippet", () => {
         const code = extension.textStyles(context);
-        console.log(code);
         return expect(Promise.resolve(code)).resolves.toMatchSnapshot();
     });
 
@@ -46,6 +45,7 @@ version.layers.map(layer => {
     describe(`Layer \`${layer.name}\``, () => {
         it("should generate code snippet", async () => {
             const code = extension.layer(context, layer, version);
+            console.log("should generate code snippet", code);
             return expect(Promise.resolve(code)).resolves.toMatchSnapshot();
         });
     });
