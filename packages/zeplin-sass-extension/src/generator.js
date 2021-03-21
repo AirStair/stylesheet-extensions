@@ -97,7 +97,7 @@ class Sass {
             ruleSelector = scope ? `${scope} ${selector}` : selector;
         }
 
-        return `${ruleSelector}\n${filteredDeclarations.map(p => this.declaration(p, isMixin)).join("\n")}\n${JSON.stringify(this)}`;
+        return `${ruleSelector}\n${filteredDeclarations.map(p => this.declaration(p, isMixin)).join("\n")}\n}`;
     }
 
     atRule({ identifier, declarations }) {
