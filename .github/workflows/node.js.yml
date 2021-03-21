@@ -26,6 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npx lerna bootstrap
-    - run: npx lerna run --scope sass npm install
     - run: npx lerna run --scope sass build
     - run: npx lerna run --scope sass test
