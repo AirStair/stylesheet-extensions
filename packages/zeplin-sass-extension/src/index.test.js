@@ -18,6 +18,7 @@ describe("Colors", () => {
 describe("Text Styles", () => {
     it("should generate code snippet", () => {
         const code = extension.textStyles(context);
+        console.log(code);
         return expect(Promise.resolve(code)).resolves.toMatchSnapshot();
     });
 
